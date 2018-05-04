@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0288d1</color>
+    <color name="colorPrimaryTransparent">#B30288d1</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF5252</color>
+
+    <color name="colorTransparentPrimary">#3F51B5</color>
+    <color name="colorPrimaryLight">#FFCDD2</color>
+    <color name="colorAccentTransparent">#B3FF5252</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="gray">#ececec</color>
+    <color name="green_complete">#ff99cc00</color>
+
+    <color name="dark_gray">#dddddd</color>
+    <color name="darker_gray">#989898</color>
+
+    <color name="status_white">#EBE9E9</color>
+    <color name="status_green">#B3FFB3</color>
+    <color name="start_gold">#ffaf00</color>
+    <color name="status_red">#FF796A</color>
+    <color name="status_light_red">#FFD1A8</color>
+    <color name="status_sky_blue">#CEE7FF</color>
+    <color name="status_brown">#BF6000</color>
+    <color name="status_purple">#C6BBD7</color>
+    <color name="status_dark_pruple">#AC9CC5</color>
+    <color name="popup_background">#555555</color>
+    <color name="status_yellow">#FFFFA8</color>
+    <color name="darkest_gray">#555</color>
+
+    <color name="success">#ee27B830</color>
+
+    <color name="drawer_icons">#6a6a6a</color>
+
+    <!--Colores Sent -->
+    <color name="status_sent_today">#c8e6c9</color>
+    <color name="status_sent_recent">#a5d6a7</color>
+    <color name="status_sent_last">#81c784</color>
+    <!--Colores Draft -->
+    <color name="status_draft_today">#bbdefb</color>
+    <color name="status_draft_recent">#90c4f9</color>
+    <color name="status_draft_last">#64b5f6</color>
+    <!--Colores para carpetas-->
+    <color name="folder_white">#dddddd</color>
+    <color name="folder_back">#ff000000</color>
+    <color name="folder_blue">#ff3845ff</color>
+    <color name="folder_red">#d44336</color>
+    <color name="folder_green">#ff06c620</color>
+    <color name="folder_yellow">#ffe3ca4f</color>
+    <!--Colores Rank-->
+    <color name="star_gold">#ffaf00</color>
+
+    <color name="blackTransparent">#B3000000</color>
+    <color name="blackTransparent2">#CC000000</color>
+    <color name="blackTransparent3">#CC000000</color>
+
+    <color name="status_white_transparent">#B3FFFFFF</color>
+    <color name="status_white_transparent2">#D9FFFFFF</color>
+    <color name="white_transparent">#D9FFFFFF</color>
+    <color name="color_text_blue">#00538d</color>
+    <color name="color_background_card">#daf6fa</color>
+    <color name="color_background_card_transparent">#D9daf6fa</color>
+    <color name="text_color_grey">#CCCCCC</color>
+    <color name="text_color_black">#000000</color>
+    <color name="text_color_white">#FFFFFF</color>
+
+</resources>
