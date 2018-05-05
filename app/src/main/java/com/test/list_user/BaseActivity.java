@@ -1,9 +1,16 @@
 package com.test.list_user;
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
@@ -66,4 +73,47 @@ public class BaseActivity extends AppCompatActivity {
             mDBHelper = null;
         }
     }
+
+    public void startRefreshingIndicator(final SwipeRefreshLayout swipeRefreshLayout) {
+        swipeRefreshLayout.setEnabled(false);
+        swipeRefreshLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                swipeRefreshLayout.setRefreshing(true);
+            }
+        });
+    }
+
+    public void stopRefreshingIndicator(final SwipeRefreshLayout swipeRefreshLayout) {
+        swipeRefreshLayout.setEnabled(true);
+        swipeRefreshLayout.setRefreshing(false);
+    }
+
+    public void setupToolBar(Toolbar toolbar,final int id) {
+        setSupportActionBar(toolbar);
+        final Drawable upArrow = ContextCompat.getDrawable(this, id);
+        upArrow.setColorFilter(ContextCompat.getColor(this, R.color.status_white), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    /**
+     * Navigate to another activity
+     */
+    public void startActivity(final Context fromContext, final Class<?> toContext, final boolean clearStack, final Bundle bundle) {
+        Intent intent = new Intent(fromContext, toContext);
+        if (clearStack) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            }
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+        if (bundle != null) {
+            intent.putExtras(bundle);
+        }
+        startActivity(intent);
+    }
+
+
 }

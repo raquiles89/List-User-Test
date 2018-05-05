@@ -1,5 +1,7 @@
 package com.test.list_user.model.response;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 /**
@@ -12,6 +14,7 @@ public class UserResponse implements Serializable {
     private String first_name;
     private String last_name;
     private String avatar;
+    private Bitmap image;
 
     public Integer getId() {
         return id;
@@ -27,5 +30,13 @@ public class UserResponse implements Serializable {
 
     public String getAvatar() {
         return avatar;
+    }
+
+    public Bitmap getImage() {
+        return image;
+    }
+
+    public void setImage(Bitmap image) {
+        this.image = image;
     }
 }

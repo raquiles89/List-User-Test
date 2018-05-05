@@ -3,4 +3,9 @@
     <string name="connection_alert_dialog_tittle">Not conexion</string>
     <string name="text_error_downlaod_model">Error downloading the data of the users</string>
     <string name="text_success_downlaod_model">All user download</string>
+    <string name="no_rv_list_data">List users is empty</string>
+    <string name="selected_color">#d1eaf2</string>
+    <string name="text_refresh_succes">List users is has updated</string>
+    <string name="toolbar_name">User List</string>
+    <string name="text_create_user">Create new user</string>
 </resources>

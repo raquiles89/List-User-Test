@@ -64,6 +64,22 @@ public class ViewUtil {
         }
     }
 
+    /**
+     * Show a custom SnackBar notification without action
+     */
+    public static void showSnackBar(final Context context, final String text, final int duration, final View view, int color) {
+        if (view != null) {
+            final Snackbar snackbar = Snackbar.make(view, text, duration);
+            //Background
+            final View snackBarView = snackbar.getView();
+            snackBarView.setBackgroundResource(color);
+            //Message
+            TextView tv = (TextView) snackBarView.findViewById(android.support.design.R.id.snackbar_text);
+            tv.setTextColor(ContextCompat.getColor(context, android.R.color.white));
+            snackbar.show();
+        }
+    }
+
     public static void showPopupIcons(final PopupMenu popup) {
         try {
             final Class<?> classPopupMenu = Class.forName(popup.getClass().getName());
