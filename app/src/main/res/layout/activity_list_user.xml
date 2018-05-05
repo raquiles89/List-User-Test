@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="70px"
-        android:src="@mipmap/ic_person_24dp"
+        android:src="@mipmap/ic_supervisor_account_white_24dp"
         android:tint="@color/folder_white"
        />
 </android.support.design.widget.CoordinatorLayout>

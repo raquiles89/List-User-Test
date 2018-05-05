@@ -9,12 +9,18 @@ import java.io.Serializable;
 public class UserRequest implements Serializable {
 
     private String page;
-
-    public String getPage() {
-        return page;
-    }
+    private String name;
+    private String job;
 
     public void setPage(String page) {
         this.page = page;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setJob(String job) {
+        this.job = job;
     }
 }

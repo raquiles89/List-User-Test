@@ -54,7 +54,7 @@ public class ListUserActivity extends BaseActivity implements UserServiceListene
         this.loadListUser();
     }
 
-    private void initializeComponent(){
+    private void initializeComponent() {
         this.avatarList = new ArrayList<>();
         this.originalUserResponse = new ArrayList<>();
         this.progressBar = findViewById(R.id.progressBar);
@@ -81,7 +81,7 @@ public class ListUserActivity extends BaseActivity implements UserServiceListene
                 android.R.color.holo_red_light);
         // Set Toolbar
         this.toolbar.setTitle(R.string.toolbar_name);
-        this.setupToolBar(toolbar, R.mipmap.ic_reorder_white_48dp);
+        this.setupToolBar(toolbar, R.mipmap.ic_list_white_24dp);
     }
 
     private void loadListUser() {
@@ -159,6 +159,7 @@ public class ListUserActivity extends BaseActivity implements UserServiceListene
     }
 
     private void setupAdapter() {
+        //Setup Adapter
         this.adapter = new ItemAdapter(this, this.originalUserResponse, this);
         this.rvUsers.setAdapter(this.adapter);
         this.rvUsers.setItemAnimator(new DefaultItemAnimator());
@@ -184,7 +185,7 @@ public class ListUserActivity extends BaseActivity implements UserServiceListene
     @Override
     public void onItemClicked(int position) {
         UserResponse user = this.originalUserResponse.get(position);
-        ViewUtil.showSnackBar(ListUserActivity.this,"Touch in " + user.getFirst_name() +" " + user.getLast_name(), Snackbar.LENGTH_SHORT, findViewById(android.R.id.content), R.color.folder_blue);
+        ViewUtil.showSnackBar(ListUserActivity.this, getString(R.string.text_touch_in) + " " + user.getFirst_name() + " " + user.getLast_name(), Snackbar.LENGTH_SHORT, findViewById(android.R.id.content), R.color.folder_blue);
     }
 
     @Override

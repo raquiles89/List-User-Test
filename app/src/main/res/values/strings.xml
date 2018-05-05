@@ -8,4 +8,7 @@
     <string name="text_refresh_succes">List users is has updated</string>
     <string name="toolbar_name">User List</string>
     <string name="text_create_user">Create new user</string>
+    <string name="text_error_create_user">Error creating the user</string>
+    <string name="text_user_create_susccess">User successfully created</string>
+    <string name="text_touch_in">Touch in </string>
 </resources>

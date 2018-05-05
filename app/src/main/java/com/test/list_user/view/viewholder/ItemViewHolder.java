@@ -9,9 +9,6 @@ import android.widget.TextView;
 import com.test.list_user.R;
 import com.test.list_user.view.listener.ItemListener;
 
-import butterknife.OnClick;
-import butterknife.OnLongClick;
-
 
 /**
  * Created by Rafael Quiles
@@ -19,31 +16,34 @@ import butterknife.OnLongClick;
 
 public class ItemViewHolder extends RecyclerView.ViewHolder {
 
-    private ItemListener listener;
+    public ItemListener listener;
     public ImageView image;
     public TextView name;
     public TextView lastName;
     public LinearLayout item_instance_layout;
 
-    public ItemViewHolder(View itemView, ItemListener listener) {
+    public ItemViewHolder(View itemView, final ItemListener listener) {
         super(itemView);
         this.listener = listener;
         this.image = itemView.findViewById(R.id.logo);
         this.name = itemView.findViewById(R.id.tvName);
         this.lastName = itemView.findViewById(R.id.tvLastName);
         this.item_instance_layout = itemView.findViewById(R.id.item_container);
+        this.item_instance_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onItemClicked(getLayoutPosition());
+                }
+            }
+        });
 
-    }
+        this.item_instance_layout.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                return listener != null && listener.onItemLongClicked(getLayoutPosition());
+            }
+        });
 
-    @OnClick(R.id.item_container)
-    void onCommentItemClicked(final View v) {
-        if (listener != null) {
-            listener.onItemClicked(getLayoutPosition());
-        }
-    }
-
-    @OnLongClick(R.id.item_container)
-    boolean onCommentItemLongClicked(final View v) {
-        return listener != null && listener.onItemLongClicked(getLayoutPosition());
     }
 }

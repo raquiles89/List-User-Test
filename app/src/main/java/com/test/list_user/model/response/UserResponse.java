@@ -15,6 +15,8 @@ public class UserResponse implements Serializable {
     private String last_name;
     private String avatar;
     private Bitmap image;
+    private String job;
+    private String createdAt;
 
     public Integer getId() {
         return id;
@@ -38,5 +40,13 @@ public class UserResponse implements Serializable {
 
     public void setImage(Bitmap image) {
         this.image = image;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
     }
 }
